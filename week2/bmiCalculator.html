@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #5e4caf;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div id="calculator">
+    <h1>BMI Calculator</h1>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" placeholder="Enter your height" required>
+
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" placeholder="Enter your weight" required>
+
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function calculateBMI() {
+        // Get user input
+        var height = parseFloat(document.getElementById('height').value);
+        var weight = parseFloat(document.getElementById('weight').value);
+
+        // Check if inputs are valid
+        if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+            alert("Please enter valid height and weight.");
+            return;
+        }
+
+        // Calculate BMI
+        var bmi = weight / Math.pow(height / 100, 2);
+
+        // Display result
+        var resultElement = document.getElementById('result');
+        resultElement.textContent = "Your BMI: " + bmi.toFixed(2);
+
+        // Interpret BMI category
+        if (bmi < 18.5) {
+            resultElement.textContent += " (Underweight)";
+        } else if (bmi >= 18.5 && bmi < 25) {
+            resultElement.textContent += " (Normal Weight)";
+        } else if (bmi >= 25 && bmi < 30) {
+            resultElement.textContent += " (Overweight)";
+        } else {
+            resultElement.textContent += " (Obese)";
+        }
+    }
+</script>
+
+</body>
+</html>
