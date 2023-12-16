@@ -4,7 +4,7 @@ A React application that provides a feature-rich To-Do List experience. Users ca
 
 ## Components
 
-##TodoList.js
+### TodoList.js
 This component displays the list of tasks and handles task deletion and completion.
 
 ### TodoItem.js
