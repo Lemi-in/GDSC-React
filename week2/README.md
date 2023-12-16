@@ -15,5 +15,3 @@ Input Validation: The application checks if the entered height and weight are va
 BMI Calculation: Calculates BMI using the formula BMI = weight (kg) / (height (m))^2.
 Weight Status Category: Provides a category based on the calculated BMI, indicating whether the user is underweight, normal weight, overweight, or obese.
 
-### How to Run
-Simply open the index.html file in a web browser (Google Chrome, Firefox, Safari, etc.) to use the BMI calculator.
