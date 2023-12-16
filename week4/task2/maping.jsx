@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import './mapping.css';
+import './maping.css';
 import member1Image from './images/member1.jpg';
 import member2Image from './images/member2.jpg';
 import member3Image from './images/member3.jpg';
