@@ -1,0 +1,32 @@
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.name {
+  color: #ffffff;
+}
+
+.job-title {
+  color: #32cd32; /* Lime green */
+}
+
+.about-title {
+  color: #ffffff;
+}
+
+.details {
+  color: #32cd32; /* Lime green */
+}
+
+.separator {
+  color: #d3d3d3; /* Light gray */
+}
+
+.location {
+  color: #32cd32; /* Lime green */
+}
+
+.description {
+  color: #d3d3d3; /* Light gray */
+}
